@@ -1,70 +1,70 @@
-**NOTE:** This creates GUID-like strings and not GUIDs. @broofa's [node-uuid](https://github.com/broofa/node-uuid) module is **much** better than this implementation.
+# Getting Started with Create React App
 
-# Guid lets you generate and validate unique identifiers.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[![browser support](https://ci.testling.com/tommydudebreaux/guid.png)](https://ci.testling.com/tommydudebreaux/guid)
+## Available Scripts
 
-In its simplest form, Guid lets you generate raw GUID formatted strings:
+In the project directory, you can run:
 
-    Guid.raw();
-    // -> '6fdf6ffc-ed77-94fa-407e-a7b86ed9e59d'
+### `npm start`
 
-Let's generate a new Guid instance.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-    var guid = Guid.create();
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-We've now got an object which we can work with programmatically. Lets check the
-validity of our Guid using the built-in validator:
+### `npm test`
 
-    Guid.isGuid(guid);
-    // -> true
-    
-    Guid.value;
-    // -> '6fdf6ffc-ed77-94fa-407e-a7b86ed9e59d'
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-A handy bit of functionality is that its `toString` method returns the string
-value, so you can do handy things like this:
+### `npm run build`
 
-    var itemUrl = "http://whatever.com/items/" + guid;
-    // -> 'http://whatever.com/items/6fdf6ffc-ed77-94fa-407e-a7b86ed9e59d'
-    
-If you need a placeholder Guid, or a value to represent a non-GUID, use the
-static `EMPTY` property:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-    Guid.EMPTY;
-    // -> '00000000-0000-0000-0000-000000000000'
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Once you have a `Guid` object, you can't change its value (thanks ES5!):
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-    guid.value = "go suck it, guid!"
-    guid.value;
-    // -> '6fdf6ffc-ed77-94fa-407e-a7b86ed9e59d'
+### `npm run eject`
 
-To instantiate an Guid object using an existing GUID string, use the constructor:
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-    var guid = new Guid('6fdf6ffc-ed77-94fa-407e-a7b86ed9e59d');
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-You can check the equality of two different Guid objects using the `equals`
-instance method.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Compare a Guid object to a GUID string:
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-    guid.equals('6fdf6ffc-ed77-94fa-407e-a7b86ed9e59d');
-    // -> true
+## Learn More
 
-Compare two Guid objects:
-    
-    guid.equals(new Guid('6fdf6ffc-ed77-94fa-407e-a7b86ed9e59d'));
-    // -> true
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Installation
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-You can use npm to install guid: `npm install guid`
+### Code Splitting
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-## But what if I need a UUID, not a GUID?
+### Analyzing the Bundle Size
 
-There's also a [Uuid](https://github.com/dandean/uuid-lib) library which has the
-**exact** same functionality, but for UUID's:
-[https://github.com/dandean/uuid-lib](https://github.com/dandean/uuid-lib)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
